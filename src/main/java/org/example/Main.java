@@ -55,6 +55,9 @@ public class Main {
         Planeta planeta2 = new Planeta("Jupiter", 7,802692940,895844848, 83454,84600000, Planeta.tipoPlaneta.TERRESTRE, true);
         Automovil automovil1 = new Automovil("Ferrari", 1990, 1500, Automovil.tipoComb.gasolina, Automovil.tipoAuto.familiar, 4, 5, 80, Automovil.col.negro, 60);
         Automovil automovil2 = new Automovil("Lamborgini", 1980, 1500, Automovil.tipoComb.biodiesel, Automovil.tipoAuto.carroCiudad, 2, 3, 180, Automovil.col.amarillo, 100);
+        CuentaBancaria cuenta1 = new CuentaBancaria("Carlos", "Munera Vargas",00023212, CuentaBancaria.tipo.corriente,200);
+        Avion a1 = new Avion("Airbus",4);
+        Avion a2 = new Avion("Lookheed",4);
 
 
         persona1.imprimir();
@@ -77,6 +80,13 @@ public class Main {
         automovil2.frenar();
         automovil2.tiempoLlegada(20);
         Automovil.frenar();
+
+        cuenta1.imprimirCuentas();
+
+        a1.imprimirFabricante();
+        a1.cambiarFabricante();
+        a2.imprimirFabricante();
+        a2.cambiarFabricante();
 
     }
 }

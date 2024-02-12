@@ -2,22 +2,22 @@ package org.example;
 
 public class FigurasGeometricas {
 
-    double radioCirculo;
-    double baseRectangulo;
-    double alturaRectangulo;
-    double ladoCuadrado;
-    double baseTriangulo;
-    double alturaTriangulo;
-    double lado1Triangulo;
-    double lado2Triangulo;
-    double lado3Triangulo;
+    public double radioCirculo;
+    public double baseRectangulo;
+    public double alturaRectangulo;
+    public double ladoCuadrado;
+    public double baseTriangulo;
+    public double alturaTriangulo;
+    public double lado1Triangulo;
+    public double lado2Triangulo;
+    public double lado3Triangulo;
 
 
     public double areaCirculo(){
         double area;
         double pi = 3,1416;
-
         area = pi * (radioCirculo*radioCirculo);
+        return area;
     }
     public double perimetroCirculo(){
         double perimetro;
@@ -69,5 +69,32 @@ public class FigurasGeometricas {
         return perimetro;
     }
 
+    public double hallarHipotenusa(){
+        double hypo = 0;
+        double cateto1 = 2;
+        double cateto2 = 4;
+
+        hypo = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+        return hypo;
+    }
+
+    public void tipoTriangulo(){
+        System.out.println("Introduzca el valor numerico del lado 1:");
+        System.out.println("Introduzca el valor numerico del lado 2:");
+        System.out.println("Introduzca el valor numerico del lado 3:");
+
+        if(lado1Triangulo==lado2Triangulo && lado2Triangulo==lado3Triangulo){
+            System.out.println("El triangulo es equilatero");
+        }else {
+            if (lado1Triangulo == lado2Triangulo || lado1Triangulo == lado3Triangulo || lado2Triangulo == lado3Triangulo) {
+                System.out.println("El triangulo es Isoceles");
+            }else {
+                if(lado1Triangulo!=lado2Triangulo||lado1Triangulo!=lado3Triangulo||lado2Triangulo!=lado3Triangulo);
+                System.out.println("El triangulo es Escaleno");
+            }
+            }
+        }
+
+    }
 
 }
