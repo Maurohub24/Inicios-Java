@@ -30,14 +30,6 @@ public class Avion {
         System.out.println("El nombre del fabricante es: " + nombreFabricante);
     }
 
-    public void cambiarFabricante(Avion a){
-        String Airplan;
 
-        a== Airplan;
-        nombreFabricante == a;
-
-        return a;
-    }
-
-
+        
 }

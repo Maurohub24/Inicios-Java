@@ -15,13 +15,13 @@ public class FigurasGeometricas {
 
     public double areaCirculo(){
         double area;
-        double pi = 3,1416;
+        double pi = 3.1416;
         area = pi * (radioCirculo*radioCirculo);
         return area;
     }
     public double perimetroCirculo(){
         double perimetro;
-        double pi = 3,1416;
+        double pi = 3.1416;
 
         perimetro = 2 * (pi * radioCirculo);
         return perimetro;
@@ -37,7 +37,7 @@ public class FigurasGeometricas {
     public double perimetroRectangulo(){
         double perimetro;
 
-        perimetro = 2(baseRectangulo + alturaRectangulo);
+        perimetro = 2*(baseRectangulo + alturaRectangulo);
         return perimetro;
     }
 
@@ -89,9 +89,7 @@ public class FigurasGeometricas {
             if (lado1Triangulo == lado2Triangulo || lado1Triangulo == lado3Triangulo || lado2Triangulo == lado3Triangulo) {
                 System.out.println("El triangulo es Isoceles");
             }else {
-                if(lado1Triangulo!=lado2Triangulo||lado1Triangulo!=lado3Triangulo||lado2Triangulo!=lado3Triangulo);
                 System.out.println("El triangulo es Escaleno");
-            }
             }
         }
 

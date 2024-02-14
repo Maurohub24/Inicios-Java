@@ -5,7 +5,10 @@ public class CuentaBancaria {
     public String nombreTitular;
     public String apellidosTitular;
     public double numeroCuenta;
-    public enum tipo {ahorros, corriente};
+
+    public enum tipo {ahorros, corriente}
+
+    ;
     tipo tipoCuenta;
     public double saldo = 0;
 
@@ -32,7 +35,6 @@ public class CuentaBancaria {
         System.out.println("Ingresa tu numero de cuenta");
         System.out.println("Ingresa tu tipo de cuenta");
 
-        return saldo;
     }
 
     public double consignarCuenta(double saldoConsignado) {
@@ -44,20 +46,16 @@ public class CuentaBancaria {
         return nuevoSaldo;
     }
 
-    public double retirarCuenta(double saldoRetiro) {
+    public void retirarCuenta(double saldoRetiro) {
         double retirocuenta = saldoRetiro;
         double nuevoSaldo;
 
         if (retirocuenta > saldo) {
             System.out.println("Saldo insuficiente");
         } else {
-            nuevoSaldo = saldo - retirocuenta;
-            return nuevoSaldo;
+            nuevoSaldo =  saldo - retirocuenta;
+            System.out.println("Su nuevo saldo es:" + nuevoSaldo);
         }
     }
 
-    public boolean compararSaldos(Object cuentaNueva){
-
-        if()
-    }
 }
