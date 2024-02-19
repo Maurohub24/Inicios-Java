@@ -12,39 +12,32 @@ public class CuentasBancarias {
         this.tasaAnual = tasaAnual;
     }
 
-    public float calcularConsignarDinero (float dineroConsignado){
-        float nuevoSaldo;
-        nuevoSaldo = saldo;
-        nuevoSaldo = saldo + dineroConsignado;
-        System.out.println("Su nuevo saldo es: " + nuevoSaldo);
+    public void calcularConsignarDinero (float dineroConsignado){
+        saldo = saldo + dineroConsignado;
+        System.out.println("Su nuevo saldo es: " + saldo);
         numeroConsignaciones ++;
-        return nuevoSaldo;
     }
 
-    public float calcularRetirarDinero(float dineroRetirado){
-       float retiroSaldo;
-       retiroSaldo = saldo;
+    public void calcularRetirarDinero(float dineroRetirado){
        if(dineroRetirado <= saldo){
-           retiroSaldo = saldo - dineroRetirado;
+           saldo = saldo - dineroRetirado;
        }else {
            System.out.println("Saldo insuficiente");
        }
-        System.out.println("Su nuevo saldo después de retirar es: " + retiroSaldo);
+        System.out.println("Su nuevo saldo después de retirar es: " + saldo);
        numeroRetiros ++;
-       return retiroSaldo;
     }
 
-    public float calcularInteresMensual(float interes){
+    public void calcularInteresMensual(float interes){
         float interesMensual;
         interesMensual= saldo + (saldo*(interes/100));
         System.out.println("Su saldo más el interés mensual es: " + interesMensual);
-        return  interesMensual;
     }
 
-    public float calcularExtractoMensual(float comisionMensual){
-        saldo = saldo - comisionMensual + calcularInteresMensual(2);
+    public void calcularExtractoMensual(){
+        saldo = saldo - comisionMensual;
+        calcularInteresMensual(2);
         System.out.println("Su extracto mensual es: " + saldo);
-        return saldo;
     }
 
     public void imprimirCuentas(){
